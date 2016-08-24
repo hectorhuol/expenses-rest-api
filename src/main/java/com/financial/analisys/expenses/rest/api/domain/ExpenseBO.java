@@ -58,7 +58,7 @@ public class ExpenseBO {
 		if (companions != null)
 			return companions;
 		else
-			companions = new ArrayList<CompanionBO>();
+			companions = new ArrayList<>();
 		return companions;
 	}
 

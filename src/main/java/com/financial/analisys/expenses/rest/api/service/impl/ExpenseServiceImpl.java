@@ -101,7 +101,7 @@ public class ExpenseServiceImpl implements ExpenseService {
 	}
 
 	private List<Companion> getCompanionsList(List<String> companionsIds) {
-		List<Companion> companions = new ArrayList<Companion>();
+		List<Companion> companions = new ArrayList<>();
 		for (String companionId : companionsIds) {
 			Companion companion = new Companion();
 			companion.setCompanionId(companionId);

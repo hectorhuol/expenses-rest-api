@@ -10,6 +10,8 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import com.financial.analisys.expenses.api.exceptions.TechnicalException;
 
 public class BOUtils {
+	
+	private BOUtils(){}
 
 	private static ObjectMapper objectMapper = new ObjectMapper();
 
@@ -81,8 +83,7 @@ public class BOUtils {
 		return object != null;
 	}
 
-	private static String excludeFields(String json, String[] excludedFields)
-			throws Exception {
+	private static String excludeFields(String json, String[] excludedFields){
 		String newJSON = null;
 		for (String field : excludedFields) {
 			newJSON = getReplaceFieldValue(field, json);

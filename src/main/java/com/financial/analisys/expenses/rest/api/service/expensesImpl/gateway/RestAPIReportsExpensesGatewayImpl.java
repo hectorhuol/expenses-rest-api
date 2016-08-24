@@ -61,7 +61,7 @@ public class RestAPIReportsExpensesGatewayImpl implements
 
 	private List<ExpenseBO> findByCompanions(List<Companion> companions,
 			List<ExpenseBO> list) {
-		List<ExpenseBO> values = new ArrayList<ExpenseBO>();
+		List<ExpenseBO> values = new ArrayList<>();
 		for (ExpenseBO expenseBO : list) {
 			if (hasSomeCompanion(expenseBO.getCompanions(), companions))
 				values.add(expenseBO);
@@ -87,7 +87,7 @@ public class RestAPIReportsExpensesGatewayImpl implements
 	}
 
 	private List<ExpenseBO> findByMonth(LocalDate month, List<ExpenseBO> list) {
-		List<ExpenseBO> values = new ArrayList<ExpenseBO>();
+		List<ExpenseBO> values = new ArrayList<>();
 		for (ExpenseBO expenseBO : list) {
 			if (isMonthEqual(month, expenseBO))
 				values.add(expenseBO);
@@ -108,7 +108,7 @@ public class RestAPIReportsExpensesGatewayImpl implements
 	}
 
 	private List<ExpenseBO> findByDay(LocalDate day, List<ExpenseBO> list) {
-		List<ExpenseBO> values = new ArrayList<ExpenseBO>();
+		List<ExpenseBO> values = new ArrayList<>();
 		for (ExpenseBO expenseBO : list) {
 			if (isDayEqual(day, expenseBO))
 				values.add(expenseBO);
@@ -131,7 +131,7 @@ public class RestAPIReportsExpensesGatewayImpl implements
 
 	private List<ExpenseBO> findBetweenDates(LocalDateTime startDate,
 			LocalDateTime finishDate, List<ExpenseBO> list) {
-		List<ExpenseBO> values = new ArrayList<ExpenseBO>();
+		List<ExpenseBO> values = new ArrayList<>();
 		for (ExpenseBO expenseBO : list) {
 			if (isDateBetweenStartAndFinishDates(startDate, finishDate,
 					expenseBO))

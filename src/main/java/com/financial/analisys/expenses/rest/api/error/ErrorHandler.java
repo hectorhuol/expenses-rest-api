@@ -83,7 +83,7 @@ public class ErrorHandler {
 		error.setStatusPhrase(status.getReasonPhrase());
 		error.setMessage(e.getMessage());
 		error.setErrorURI(req.getRequestURI());
-		return new ResponseEntity<ErrorModel>(error, status);
+		return new ResponseEntity<>(error, status);
 	}
 
 }
